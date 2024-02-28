@@ -1,0 +1,33 @@
+shell:
+  program: "/bin/zsh"
+  args: 
+    - "-l"
+
+position:
+  x: 0
+  y: 0
+
+window:
+  dimensions: 
+    columns: 100
+    lines: 20
+  opacity: 0.75
+  blur: true
+
+  resize_increments: true
+
+scrolling:
+  history: 10000
+  multiplier: 5
+
+font:
+  normal: 
+    family: FiraCode Nerd Font
+    style: Medium
+  size: 10
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+  blink_interval: 500

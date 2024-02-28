@@ -1,0 +1,178 @@
+format = """
+[┌](triforce)[](green_00)\
+$os\
+[](fg:green_00 bg:green_01)\
+$username\
+[](fg:white bg:green_01)\
+$directory\
+[](fg:white bg:green_01)\
+($git_branch)\
+($git_status)\
+[](fg:green_01)\
+$fill\
+[](gray)\
+[ 󰯙 ](triforce bg:gray)\
+[ 🰀 ](fg:light bg:gray)\
+[ 🰁 ](fg:forest bg:gray)\
+[ 🰂 ](fg:fire bg:gray)\
+[ 🰃 ](fg:water bg:gray)\
+[ 🰄 ](fg:shadow bg:gray)\
+[ 🰅  ](fg:spirit bg:gray)\
+[](gray)\
+[](fg:yellow_00)\
+$time\
+[](fg:yellow_01 bg:yellow_00)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$terraform\
+[](fg:yellow_02 bg:yellow_01)\
+$cmd_duration\
+[](yellow_02)
+[└](triforce)[](fg:white)$character
+"""
+
+palette = "zelda"
+
+[palettes.zelda]
+green_03 = "#155D27"
+green_02 = "#1A7431"
+green_01 = "#208B3A"
+green_00 = "#25A244"
+
+yellow_00 = "#FFE94E" 
+yellow_01 = "#FFDA3D"
+yellow_02 = "#FDC43F"
+
+triforce = "#FFD025"
+light = "#FFDB3C"
+forest = "#3CD07A"
+fire = "#FF3434"
+water = "#3721E2"
+shadow = "#8B2BA6"
+spirit = "#F7A62B"
+
+[os.symbols]
+Macos = ""
+Debian = ""
+Arch = "󰣇"
+
+[os]
+format = "[$symbol](bg:green_00 fg:white)"
+style = 'bg:triforce fg:black'
+disabled = false
+
+[username]
+show_always = true
+disabled = false
+format = '[ $user ]($style)'
+style_user = 'bg:green_01 fg:white'
+style_root = "$style_user"
+
+[time]
+disabled = false
+time_format = '%R%z'
+format = "[ $time ]($style)"
+style = "bg:yellow_00 fg:black"
+
+[directory]
+disabled = false
+format = "[ 󰝰 $path ]($style)"
+home_symbol = " ~"
+style = "bg:green_01 fg:white"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = "󰊢 "
+style = "bg:green_01 fg:white"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:green_01 fg:white"
+format = '[$all_status $ahead_behind ]($style)'
+
+[fill]
+symbol = ''
+style = 'bold triforce'
+
+[nodejs]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[terraform]
+symbol = "󱁢"
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[c]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[php]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[java]
+symbol = "󰅶"
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[ $symbol($version) ]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:yellow_01 fg:black"
+format = '[$symbol($context) ]($style)'
+
+[cmd_duration]
+show_milliseconds = true
+format = '[ 󱫠 $duration ]($style)'
+style = "bg:yellow_02 fg:black"
+
+[character]
+disabled = false
+success_symbol = '[ 󰣐 󰣐 󰣐 ](bg:white fg:red)[](white)'
+error_symbol = '[ ♥ ♥ ♥ ](bg:white fg:black)[](white)'
+vimcmd_symbol = '[󰯙](bold fg:forest)'
+vimcmd_replace_one_symbol = '[󰯙](bold fg:shadow)'
+vimcmd_replace_symbol = '[󰯙](bold fg:shadow)'
+vimcmd_visual_symbol = '[󰯙](bold fg:triforce)'
