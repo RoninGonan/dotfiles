@@ -10,7 +10,6 @@ $directory\
 ($git_status)\
 [](fg:green_01)\
 $fill\
-[](gray)\
 [ 󰯙 ](triforce bg:gray)\
 [ 🰀 ](fg:light bg:gray)\
 [ 🰁 ](fg:forest bg:gray)\
@@ -18,7 +17,6 @@ $fill\
 [ 🰃 ](fg:water bg:gray)\
 [ 🰄 ](fg:shadow bg:gray)\
 [ 🰅  ](fg:spirit bg:gray)\
-[](gray)\
 [](fg:yellow_00)\
 $time\
 [](fg:yellow_01 bg:yellow_00)\

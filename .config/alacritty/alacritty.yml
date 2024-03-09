@@ -24,10 +24,11 @@ font:
   normal: 
     family: FiraCode Nerd Font
     style: Medium
-  size: 10
+  size: 12
 
 cursor:
   style:
     shape: Beam
     blinking: On
   blink_interval: 500
+
