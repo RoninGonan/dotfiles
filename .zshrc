@@ -36,11 +36,19 @@ fi
 zplug load
 
 if [ -f ~/.config/shell/.aliases ]; then
-    source ~/.config/shell/.aliases
+   source $HOME/.config/shell/.aliases
 fi
 
 if [ -f ~/.config/shell/.env_vars ]; then
     source ~/.config/shell/.env_vars
+fi
+
+if [ -f ~/.config/fzf/completion.zsh ]; then
+    source ~/.config/fzf/completion.zsh
+fi
+
+if [ -f ~/.config/fzf/key-bindings.zsh ]; then
+    source ~/.config/fzf/key-bindings.zsh
 fi
 
 eval "$(starship init zsh)" 
