@@ -1,0 +1,32 @@
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[font]
+size = 14
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Medium"
+
+[scrolling]
+history = 10000
+multiplier = 5
+
+[shell]
+args = ["-u"]
+program = "/opt/homebrew/bin/tmux"
+
+[window]
+blur = true
+opacity = 0.75
+resize_increments = true
+
+[window.dimensions]
+columns = 150
+lines = 60
+
+
