@@ -1,8 +1,12 @@
+### ALIASES ###
+## Generic
 alias ls="ls --color=auto"
 alias ll="ls -lah"
 alias grep="grep --color=auto"
 alias ec="$EDITOR ~/.zshrc"
 alias sc="source ~/.zshrc"
+
+## git ##
 alias lastdiff="git diff HEAD~1 HEAD"
 alias diff="git diff"
 alias sts="git status"

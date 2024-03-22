@@ -1,0 +1,27 @@
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	side-by-side = true
+	hyperlinks = true
+	features = visual-studio-dark-plus
+
+
+[include]
+	path = ~/.config/git-delta/themes.gitconfig
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[user]
+	name = Antonio Gonzalez
+	email = antonio.gonzalez_carrera@mercedes-benz.com
+[alias]
+	graph = log --graph --abbrev-commit --decorate --format=format:\"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(black)%s%C(reset) %C(magenta)- %an%C(reset)%C(bold yellow)%d%C(reset)\" --all
