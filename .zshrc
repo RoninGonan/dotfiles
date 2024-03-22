@@ -1,12 +1,5 @@
-# Set path if required
-#export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
-
-# Set up the prompt - if you load Theme with zplugin as in this example, this will be overriden by the Theme. If you comment out the Theme in zplugins, this will be loaded.
-autoload -Uz promptinit
-promptinit
-
-# Use vi keybindings even if our EDITOR is set to vi
-bindkey -e
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 setopt histignorealldups sharehistory
 
@@ -15,7 +8,6 @@ HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.zsh_history
 
-# Use modern completion system
 autoload -Uz compinit
 compinit
 
@@ -25,6 +17,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
+zplug "plugins/kubectl", from:oh-my-zsh, ignore:oh-my-zsh.sh
 
 # zplug - install/load new plugins when zsh is started or reloaded
 if ! zplug check --verbose; then
@@ -36,19 +29,22 @@ fi
 zplug load
 
 if [ -f ~/.config/shell/.aliases ]; then
-   source $HOME/.config/shell/.aliases
+   source ~/.config/shell/.aliases
 fi
 
 if [ -f ~/.config/shell/.env_vars ]; then
     source ~/.config/shell/.env_vars
 fi
 
-if [ -f ~/.config/fzf/completion.zsh ]; then
-    source ~/.config/fzf/completion.zsh
-fi
+eval "$(starship init zsh)"
 
-if [ -f ~/.config/fzf/key-bindings.zsh ]; then
-    source ~/.config/fzf/key-bindings.zsh
-fi
+eval "$(fuck --alias)"
 
-eval "$(starship init zsh)" 
+eval "$(fzf --zsh)"
+
+neofetch 
+
+eval "$(thefuck --alias)"
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
