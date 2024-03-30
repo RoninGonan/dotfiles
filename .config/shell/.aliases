@@ -8,7 +8,7 @@ alias sc="source ~/.zshrc"
 
 ## git ##
 alias lastdiff="git diff HEAD~1 HEAD"
-alias diff="git diff"
+alias currdiff="git diff"
 alias sts="git status"
 alias addall="git add ."
 alias add="git add"
@@ -22,3 +22,4 @@ alias graph="git log --graph --all --abbrev-commit --decorate --format=format:\"
 alias pull="git pull"
 alias rbs="git rebase"
 alias cmtall="git commit -a -m"
+

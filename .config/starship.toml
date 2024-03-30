@@ -10,13 +10,13 @@ $directory\
 ($git_status)\
 [](fg:green_01)\
 $fill\
-[ 󰯙 ](triforce bg:gray)\
-[ 🰀 ](fg:light bg:gray)\
-[ 🰁 ](fg:forest bg:gray)\
-[ 🰂 ](fg:fire bg:gray)\
-[ 🰃 ](fg:water bg:gray)\
-[ 🰄 ](fg:shadow bg:gray)\
-[ 🰅  ](fg:spirit bg:gray)\
+[ 󰯙 ](triforce)\
+[ 🰀 ](fg:light)\
+[ 🰁 ](fg:forest)\
+[ 🰂 ](fg:fire)\
+[ 🰃 ](fg:water)\
+[ 🰄 ](fg:shadow)\
+[ 🰅  ](fg:spirit)\
 [](fg:yellow_00)\
 $time\
 [](fg:yellow_01 bg:yellow_00)\
@@ -81,10 +81,10 @@ style = "bg:yellow_00 fg:black"
 
 [directory]
 disabled = false
-format = "[ 󰝰 $path ]($style)"
+format = "[ (󰝰 $path) ]($style)"
 home_symbol = " ~"
 style = "bg:green_01 fg:white"
-truncation_length = 3
+truncation_length = 1
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -94,13 +94,25 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-symbol = "󰊢 "
+symbol = ""
 style = "bg:green_01 fg:white"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:green_01 fg:white"
 format = '[$all_status $ahead_behind ]($style)'
+conflicted = "󰞇"
+ahead = "󰜷"
+behind = "󰜮"
+diverged = ""
+up_to_date = "󰸞"
+untracked = ""
+stashed = "󱉛"
+modified = ""
+staged = ""
+renamed = "󰑕"
+deleted = "󰗨"
+typechanged = ""
 
 [fill]
 symbol = ''
@@ -109,57 +121,57 @@ style = 'bold triforce'
 [nodejs]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol node ($version) ]($style)'
 
 [terraform]
 symbol = "󱁢"
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol terraform ($version) ]($style)'
 
 [c]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol c ($version) ]($style)'
 
 [rust]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol rust ($version) ]($style)'
 
 [golang]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol golang ($version) ]($style)'
 
 [php]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol php ($version) ]($style)'
 
 [java]
 symbol = "󰅶"
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol java ($version) ]($style)'
 
 [kotlin]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol kotlin ($version) ]($style)'
 
 [haskell]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol haskell ($version) ]($style)'
 
 [python]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol python ($version) ]($style)'
 
 [docker_context]
 symbol = ""
 style = "bg:yellow_01 fg:black"
-format = '[$symbol($context) ]($style)'
+format = '[$symbol docker ($context) ]($style)'
 
 [cmd_duration]
 show_milliseconds = true
@@ -169,7 +181,7 @@ style = "bg:yellow_02 fg:black"
 [character]
 disabled = false
 success_symbol = '[ 󰣐 󰣐 󰣐 ](bg:white fg:red)[](white)'
-error_symbol = '[ ♥ ♥ ♥ ](bg:white fg:black)[](white)'
+error_symbol = '[    ](bg:white fg:black)[](white)'
 vimcmd_symbol = '[󰯙](bold fg:forest)'
 vimcmd_replace_one_symbol = '[󰯙](bold fg:shadow)'
 vimcmd_replace_symbol = '[󰯙](bold fg:shadow)'
