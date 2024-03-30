@@ -1,0 +1,3 @@
+function readAllFiles() {
+	echo $(find -type f)
+}

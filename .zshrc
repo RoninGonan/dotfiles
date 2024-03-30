@@ -36,6 +36,11 @@ if [ -f ~/.config/shell/.env_vars ]; then
     source ~/.config/shell/.env_vars
 fi
 
+if [ -f ~/.config/shell/.functions ]; then
+    source ~/.config/shell/.functions
+fi
+
+
 eval "$(starship init zsh)"
 
 eval "$(fuck --alias)"
