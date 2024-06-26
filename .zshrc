@@ -43,11 +43,9 @@ fi
 
 eval "$(starship init zsh)"
 
-eval "$(fuck --alias)"
+source <(fzf --zsh)
 
-eval "$(fzf --zsh)"
-
-neofetch 
+fastfetch 
 
 eval "$(thefuck --alias)"
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
